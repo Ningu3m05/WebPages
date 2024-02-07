@@ -1,0 +1,88 @@
+/*tira as bordas e colore */
+body {
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    margin: 0px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Arial;
+    color: #000000;
+}
+
+/* Imagem da load screen */
+.imagem{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Ajusta o tamanho da imagem */
+/* porcetagem funciona melhor para adaptar tamnahos */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/*A magica esta aqui */
+/* configura o bloco com todas as imagens */
+.flex {
+    display: flex;
+    flex-wrap: wrap; /*Faz as imagesn quebrarem linha */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* faz com que as imagenns se adptem */
+/* configura os blocos de cada imagem  */
+/* 1(pra aumentarem de tamanho igualmente) 1(pra diminuirem de tamanho igualmente) 200px */
+.flex > div {
+    flex: 1 1 200px; /*forma resumida do flex-grow, flex-shrink e flex-basis*/
+    margin: 10px;
+} 
+
+/* aqui é o esqueleto da barra */
+#loader-container {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2%;
+    background-color: #f0f0f0;
+}
+
+/* aqui é a cor, tamanho e duração da barra de carregamento */
+#loader {
+    height: 100%;
+    background-color: #4caf50;
+    animation: progress 3s ease-in-out forwards;
+}
+
+/* aqui a barra ganha vida */
+@keyframes progress {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    width: 100%;
+    background-color: #4c794c;
+}

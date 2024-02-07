@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<!-- usei a mesma classe para simplificar estilzação -->
+<div class="imagem">
+<!-- peguei uma imagem com mais resolução mas n muito pesada -->
+    <img src="002.png" alt="melhorInicial" class="imagem">
+</div>
+
+<!-- esqueleto da barra de carregamento -->
+    <div id="loader-container">
+        <div id="loader"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var loaderContainer = document.getElementById("loader-container");
+
+            // Exibir a barra de carregamento
+            loaderContainer.style.display = "block";
+
+            // Simular um carregamento
+            setTimeout(function() {
+                // Esconder a barra de carregamento
+                loaderContainer.style.display = "none";
+
+                // Carregar a próxima página 
+                window.location.href = "landingPage.html";
+            }, 3000); // Tempo de simulação de carregamento em milissegundos
+        });
+    </script>
+</body>
+</html>
